@@ -65,3 +65,17 @@ Publish the contents of `dist/` to a static host. There is no server application
 The service worker caches the site on production hosts and is disabled on localhost so edits stay visible. Bump its cache version when publishing asset changes. The contact form still needs a network connection.
 
 If you change the domain, update `robots.txt`, `sitemap.xml` and the contact form's subject. Font and icon license notices live alongside their assets.
+
+### Deploy to Cloudflare
+
+Production runs on the `rai-portfolio` Cloudflare Worker at https://rai.codes and https://www.rai.codes. The Worker serves static assets; it has no Git repository connected for automatic deployments.
+
+With Wrangler 4 installed and access to the existing Cloudflare account:
+
+```sh
+wrangler login
+wrangler deploy --dry-run
+wrangler deploy --keep-vars
+```
+
+`wrangler.jsonc` preserves the production domains and publishes `dist/`. Deployment credentials stay in your local Wrangler login, outside this repository. A GitHub push alone does not publish the website.
