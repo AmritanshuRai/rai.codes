@@ -82,6 +82,6 @@ wrangler deploy --keep-vars
 
 ## Analytics
 
-Cloudflare Web Analytics measures visits and page performance without analytics cookies or local storage. Cloudflare injects its script on the production domain; the local preview does not add it. The content security policy allows the Cloudflare Insights script and reporting endpoint. Manage collection in the Cloudflare dashboard under Web Analytics → rai.codes.
+Cloudflare Web Analytics measures visits and page performance without analytics cookies or local storage. `app.js` loads the Cloudflare beacon only on `rai.codes` and `www.rai.codes`; local previews and the Worker preview hostname do not add it. Manual snippet installation is selected in Cloudflare to avoid duplicate injection. The beacon token is a public site identifier. The content security policy allows the Cloudflare Insights script and reporting endpoint. Manage collection in the Cloudflare dashboard under Web Analytics → rai.codes.
 
 There is no Google Analytics or advertising tracker. The intro uses a separate session-storage flag to avoid replaying within the same tab. Section changes keep the same URL, so analytics measures page visits rather than counting each section as a separate page.

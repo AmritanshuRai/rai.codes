@@ -444,3 +444,12 @@ if (
     navigator.serviceWorker.register("/sw.js").catch(console.error)
   );
 }
+
+// Public site token; manual installation is enabled in Cloudflare Web Analytics.
+if (["rai.codes", "www.rai.codes"].includes(location.hostname)) {
+  const beacon = document.createElement("script");
+  beacon.type = "module";
+  beacon.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  beacon.dataset.cfBeacon = JSON.stringify({ token: "79c260ccc29c4d9d8526abc48438dd6a" });
+  document.head.append(beacon);
+}
