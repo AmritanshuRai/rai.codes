@@ -204,6 +204,11 @@ a {
   }
 }
 .origin-note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  max-width: calc(100% - 24px);
   position: absolute;
   bottom: 1.5rem;
   color: #bbb;
@@ -2131,3 +2136,14 @@ button {
 .intro-active.intro-exiting #intro { opacity: 0; }
 #intro * { animation-play-state: paused; }
 .intro-active #intro * { animation-play-state: running; }
+
+.origin-note a {
+  color: #bbb;
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  pointer-events: auto;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.origin-note a:hover, .origin-note a:focus-visible { color: #fff; }

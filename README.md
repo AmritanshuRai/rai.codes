@@ -68,9 +68,9 @@ If you change the domain, update `robots.txt`, `sitemap.xml` and the contact for
 
 ### Deploy to Cloudflare
 
-Production runs on the `rai-portfolio` Cloudflare Worker at https://rai.codes and https://www.rai.codes. The Worker serves static assets; it has no Git repository connected for automatic deployments.
+Production runs on the `rai-portfolio` Cloudflare Worker at https://rai.codes and https://www.rai.codes. The Worker serves static assets. Cloudflare Builds is connected to `AmritanshuRai/rai.codes`: every push to `main` runs `npm run check` with Node.js 24, then `npx wrangler deploy --keep-vars`. A failed check stops deployment. Preview builds are disabled.
 
-With Wrangler 4 installed and access to the existing Cloudflare account:
+To deploy manually with Wrangler 4 and access to the existing Cloudflare account:
 
 ```sh
 wrangler login
@@ -78,7 +78,7 @@ wrangler deploy --dry-run
 wrangler deploy --keep-vars
 ```
 
-`wrangler.jsonc` preserves the production domains and publishes `dist/`. Deployment credentials stay in your local Wrangler login, outside this repository. A GitHub push alone does not publish the website.
+`wrangler.jsonc` preserves the production domains and publishes `dist/`. Automatic deployment credentials are managed by Cloudflare Builds, outside this repository. Manual deployments use your local Wrangler login. Build status and logs are available in the Worker’s Deployments tab.
 
 ## Analytics
 
