@@ -1,0 +1,17 @@
+{
+  "name": "amritanshu-rai-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A browser-native portfolio: HTML, CSS and JavaScript with no build or runtime dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check dist/assets/intro.js && node --check dist/assets/app.js && node --check dist/assets/fluid.js && node --check dist/sw.js && node --test tests/*.test.mjs"
+  }
+}

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.web3forms.com; worker-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rai's Portfolio</title>
+  <meta name="description"
+    content="This cool App contains information about my work experience as a software developer.">
+  <meta name="keywords" content="Software developer, Full Stack Developer">
+  <meta name="theme-color" content="#fff">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/assets/images/icon.png">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/intro.js"></script>
+  <script type="module" src="/assets/app.js"></script>
+</head>
+
+<body>
+  <div id="intro" aria-hidden="true">
+    <div class="almostThereSon"><span><span></span><span></span><span></span><span></span></span><div class="base"><span></span><div class="face"></div></div></div>
+    <div class="longfazers"><span></span><span></span><span></span><span></span></div>
+    <p class="almostThereSon_text">Almost there</p>
+  </div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="portfolio-shell">
+    <nav id="navigation" class="navigation" aria-label="Main navigation">
+      <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu-items"
+        data-action="toggle-menu">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" color="white"
+          class="menu-open" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: white"
+          aria-hidden="true" focusable="false">
+          <path
+            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+          </path>
+        </svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 352 512" color="white"
+          class="menu-close" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: white"
+          aria-hidden="true" focusable="false">
+          <path
+            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+          </path>
+        </svg>
+      </button>
+      <ul id="menu-items" class="menu-items" inert="">
+        <li>
+          <button type="button" class="menu-item" data-action="navigate" data-target="home" aria-current="page">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="menu-icon"
+              height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path
+                d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
+              </path>
+            </svg><span class="menu-label">Home</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item" data-action="navigate" data-target="about">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="menu-icon"
+              height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path
+                d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z">
+              </path>
+            </svg><span class="menu-label">About</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item" data-action="navigate" data-target="skills">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="menu-icon"
+              height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path
+                d="M109.46 244.04l134.58-134.56-44.12-44.12-61.68 61.68a7.919 7.919 0 0 1-11.21 0l-11.21-11.21c-3.1-3.1-3.1-8.12 0-11.21l61.68-61.68-33.64-33.65C131.47-3.1 111.39-3.1 99 9.29L9.29 99c-12.38 12.39-12.39 32.47 0 44.86l100.17 100.18zm388.47-116.8c18.76-18.76 18.75-49.17 0-67.93l-45.25-45.25c-18.76-18.76-49.18-18.76-67.95 0l-46.02 46.01 113.2 113.2 46.02-46.03zM316.08 82.71l-297 296.96L.32 487.11c-2.53 14.49 10.09 27.11 24.59 24.56l107.45-18.84L429.28 195.9 316.08 82.71zm186.63 285.43l-33.64-33.64-61.68 61.68c-3.1 3.1-8.12 3.1-11.21 0l-11.21-11.21c-3.09-3.1-3.09-8.12 0-11.21l61.68-61.68-44.14-44.14L267.93 402.5l100.21 100.2c12.39 12.39 32.47 12.39 44.86 0l89.71-89.7c12.39-12.39 12.39-32.47 0-44.86z">
+              </path>
+            </svg><span class="menu-label">Skills</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item" data-action="navigate" data-target="work">
+            <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+              <rect x="3" y="7" width="18" height="14" rx="2"></rect>
+              <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12a20 20 0 0 0 18 0M12 11v4"></path>
+            </svg><span class="menu-label">Work</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item" data-action="navigate" data-target="projects">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 480 512" class="menu-icon"
+              height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path
+                d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z">
+              </path>
+            </svg><span class="menu-label">Projects</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item" data-action="navigate" data-target="contact">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="menu-icon"
+              height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path
+                d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z">
+              </path>
+            </svg><span class="menu-label">Contact</span>
+          </button>
+        </li>
+      </ul>
+    </nav><svg class="hidden" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="icon-contact" viewBox="0 0 483.3 483.3">
+          <title>contact</title>
+          <g>
+            <g>
+              <path
+                d="M424.3,57.75H59.1c-32.6,0-59.1,26.5-59.1,59.1v249.6c0,32.6,26.5,59.1,59.1,59.1h365.1c32.6,0,59.1-26.5,59.1-59.1 v-249.5C483.4,84.35,456.9,57.75,424.3,57.75z M456.4,366.45c0,17.7-14.4,32.1-32.1,32.1H59.1c-17.7,0-32.1-14.4-32.1-32.1v-249.5 c0-17.7,14.4-32.1,32.1-32.1h365.1c17.7,0,32.1,14.4,32.1,32.1v249.5H456.4z">
+              </path>
+              <path
+                d="M304.8,238.55l118.2-106c5.5-5,6-13.5,1-19.1c-5-5.5-13.5-6-19.1-1l-163,146.3l-31.8-28.4c-0.1-0.1-0.2-0.2-0.2-0.3 c-0.7-0.7-1.4-1.3-2.2-1.9L78.3,112.35c-5.6-5-14.1-4.5-19.1,1.1c-5,5.6-4.5,14.1,1.1,19.1l119.6,106.9L60.8,350.95 c-5.4,5.1-5.7,13.6-0.6,19.1c2.7,2.8,6.3,4.3,9.9,4.3c3.3,0,6.6-1.2,9.2-3.6l120.9-113.1l32.8,29.3c2.6,2.3,5.8,3.4,9,3.4 c3.2,0,6.5-1.2,9-3.5l33.7-30.2l120.2,114.2c2.6,2.5,6,3.7,9.3,3.7c3.6,0,7.1-1.4,9.8-4.2c5.1-5.4,4.9-14-0.5-19.1L304.8,238.55z">
+              </path>
+            </g>
+          </g>
+        </symbol>
+        <symbol id="icon-cross" viewBox="0 0 24 24">
+          <title>cross</title>
+          <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+          </path>
+        </symbol>
+      </defs>
+    </svg>
+    <div class="contact-panel" id="contact-panel" inert="" role="region" aria-label="Contact">
+      <div class="copy-notice" role="status" aria-live="polite"></div>
+      <div class="contact-summary">
+        <div class="contact-heading" id="contact-title" role="heading" aria-level="2" tabindex="-1">
+          Let's Make Something Great Together
+        </div>
+        <div class="contact-details">
+          <p>
+            Drop me an email at
+            <a
+              href="mailto:amritanshurai04@gmail.com?subject=Come%20join%20us!&amp;body=We%20want%20you%20in%20our%20team%2C%20we%20have%20pizza%20friday">amritanshurai04@gmail.com</a><button
+              class="copy-email" type="button" data-action="copy-email" aria-label="Copy email address">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="FaCopy"
+                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <path
+                  d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z">
+                </path>
+              </svg>
+            </button>
+          </p>
+          <p>Or get in touch with me on</p>
+          <div class="socialIconsContainer">
+            <a href="https://linkedin.com/in/amritanshu-rai-171184178" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                viewBox="0 0 448 512" class="FaLinkedinIn" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" focusable="false">
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                </path>
+              </svg></a><a href="https://github.com/AmritanshuRai" target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512"
+                class="FaGithub" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                focusable="false">
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                </path>
+              </svg></a><a href="https://x.com/CodexWithK" target="_blank" rel="noopener noreferrer" aria-label="X">
+                <svg class="social-x" viewBox="0 0 24 24" fill="currentColor" height="1em" width="1em" aria-hidden="true" focusable="false">
+                  <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.64 7.584H.47l8.6-9.835L0 1.154h7.594l5.243 6.932 6.064-6.933Zm-1.29 19.49h2.039L6.487 3.24H4.3l13.31 17.403Z"></path>
+                </svg></a>
+          </div>
+          <a class="field raised-button resume" href="/assets/resume.pdf" rel="noopener noreferrer" download=""><span
+              class="resume_text"> Resume</span><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+              viewBox="0 0 512 512" class="anonFeedback_icon resume_icon" height="1em" width="1em"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path
+                d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z">
+              </path>
+            </svg></a>
+          <div class="feedback-entry">
+            <button class="feedback-link" type="button" data-action="show-feedback">
+              feedback</button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+              class="FaArrowRight" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              focusable="false">
+              <path
+                d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
+              </path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <form class="feedback-form" id="feedback-form" autocomplete="off" hidden="" aria-label="Feedback" aria-describedby="feedback-status">
+        <!-- Public Web3Forms access key for the verified recipient. -->
+        <input type="hidden" name="access_key" value="3a0b5d8a-1e18-426a-8af2-12b915c8c0c0">
+        <input type="hidden" name="subject" value="New message from rai.codes">
+        <input type="hidden" name="from_name" value="Rai Portfolio">
+        <input placeholder="Your name..." type="text" name="name" autocomplete="off" maxlength="100" required
+          class="field anonFeedback_input-name" aria-label="Your name">
+        <input placeholder="Your email..." type="email" name="email" autocomplete="off" maxlength="254" required
+          class="field" aria-label="Your email">
+        <textarea maxlength="500" name="message" autocomplete="off" required
+          placeholder="Your message..." class="field message-field" aria-label="Your message"></textarea>
+        <div class="feedback-actions">
+          <button type="button" class="field raised-button" data-action="hide-feedback">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+              class="anonFeedback_icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              focusable="false">
+              <path
+                d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z">
+              </path>
+            </svg><span class="button-label">back</span></button><button type="submit" class="field raised-button" id="feedback-send">
+            <span class="button-label">send</span><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+              viewBox="0 0 512 512" class="anonFeedback_icon" height="1em" width="1em"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path
+                d="M440 6.5L24 246.4c-34.4 19.9-31.1 70.8 5.7 85.9L144 379.6V464c0 46.4 59.2 65.5 86.6 28.6l43.8-59.1 111.9 46.2c5.9 2.4 12.1 3.6 18.3 3.6 8.2 0 16.3-2.1 23.6-6.2 12.8-7.2 21.6-20 23.9-34.5l59.4-387.2c6.1-40.1-36.9-68.8-71.5-48.9zM192 464v-64.6l36.6 15.1L192 464zm212.6-28.7l-153.8-63.5L391 169.5c10.7-15.5-9.5-33.5-23.7-21.2L155.8 332.6 48 288 464 48l-59.4 387.3z">
+              </path>
+            </svg>
+          </button>
+        </div>
+        <p id="feedback-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="portfolio-scene">
+      <div class="scene-layer" aria-hidden="true"></div>
+      <div class="scene-layer" aria-hidden="true"></div>
+      <div class="scene-layer" aria-hidden="true"></div>
+      <div class="scene-surface"><canvas class="fluid-canvas" aria-hidden="true"></canvas>
+        <div class="content-viewport">
+          <div class="scene-controls">
+            <button class="contact-menu-button" type="button" aria-label="Open menu" data-action="contact-menu"
+              hidden="">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                class="contact-menu-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                focusable="false">
+                <path
+                  d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                </path>
+              </svg>
+            </button>
+            <div class="contact-toggle-position">
+              <button class="contact-toggle" title="Contact me" type="button" data-action="toggle-contact"
+                aria-expanded="false" aria-controls="contact-panel" aria-label="Contact me">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-contact"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <main class="scene-content" id="main-content" tabindex="-1">
+            <div class="view-stack" id="view-content">
+              <div class="headingWrapper" id="home" data-view="home" aria-labelledby="home-title">
+                <div class="heading name" id="home-title" role="heading" aria-level="1" tabindex="-1">
+                  Amritanshu rai
+                </div>
+                <div class="heading desc">
+                  Fullstack developer
+                </div>
+                <div class="skillType"
+                  aria-label="Skills: ReactJS, AngularJS, NodeJS, Redis, JavaScript, MongoDB, Nginx, AWS, WebAssembly, HTML, CSS, Jest, TypeScript and other skills.">
+
+                  <code class="code-skill"
+                    aria-hidden="true"><div></div><div class="lg:pl-8"><span class="text-green-500 font-20">const</span> <span class="brackets">{</span> <span class="text-red-500">reactJS</span>, <span class="text-red-500">angularJS</span>, <span class="text-red-500">nodeJS</span>, <span class="text-red-500">redis</span>, </div><div class="lg:pl-8"><span class="text-red-500">javascript</span>, <span class="text-red-500">mongodb</span>, <span class="text-red-500">nginx</span>, <span class="text-red-500">AWS</span>, <span class="text-red-500">webAssembly</span>, </div><div class="lg:pl-8"><span class="text-red-500">HTML</span>, <span class="text-red-500">CSS</span>, <span class="text-red-500">jest</span>, <span class="text-red-500">typescript</span>, <span class="text-red-500"></span> ...<span class="text-blue-600">otherSkills</span></div><span class="brackets">}</span> <span>=</span> <span class="text-green-500 font-20">skills;</span></code>
+                </div>
+                <small class="origin-note">created in 2019 without AI</small>
+              </div>
+              <section class="about" style="pointer-events: all" id="about" data-view="about" hidden=""
+                aria-labelledby="about-title">
+                <div class="about-textWrapper">
+                  <div class="animated-title about-animated-title">
+                    <div class="text-top skills">
+                      <div class="skillWrapper">
+                        <span class="animateText" id="about-title" role="heading" aria-level="1"
+                          tabindex="-1">About</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    Frontend engineer with 8+ years of experience across augmented reality,
+                    digital media and fintech. Most recently Staff Software Engineer at Blippar,
+                    building client-side media processing, asset pipelines and tooling for a
+                    browser-based WebAR studio.
+                  </p>
+                  <p>
+                    Previously unified 40+ publishing sites at Condé Nast and built loan-origination
+                    journeys at Kuliza. Now building UIReady and Odigra as a solo founder and engineer,
+                    working with React, TypeScript and WebAssembly.
+                  </p>
+                  <p>
+                    If that sounds like someone you’d like to
+                    collaborate with then do not hesitate to
+                    <a class="about-message" href="#contact" data-action="contact-from-about">drop me a
+                      message.</a>
+                  </p>
+                </div>
+                <div class="about-imgWrapper">
+                  <div class="about-img border-about">
+                    <img src="/assets/images/portrait.png" width="1254" height="1254" loading="lazy"
+                      decoding="async" alt="Amritanshu Rai">
+                  </div>
+                </div>
+              </section>
+              <section class="TextMain" style="pointer-events: all" id="skills" data-view="skills" hidden=""
+                aria-labelledby="skills-title">
+                <div class="animated-title">
+                  <div class="text-top skills"><div class="skillWrapper">
+                    <span class="animateText" id="skills-title" role="heading" aria-level="1" tabindex="-1">Skills</span>
+                  </div></div>
+                </div>
+                <div class="animated-title">
+                  <div class="text-top"><div style="animation-delay: 0.3s">
+                    <span class="animateText" role="heading" aria-level="2">Languages</span>
+                  </div></div>
+                  <p class="skillPara">
+                    <span class="animateText">JavaScript (ES6+)</span><span class="animateText">TypeScript</span><span class="animateText">HTML</span><span class="animateText">CSS</span>
+                  </p>
+                </div>
+                <div class="animated-title">
+                  <div class="text-top"><div style="animation-delay: 0.7s">
+                    <span class="animateText" role="heading" aria-level="2">Frontend</span>
+                  </div></div>
+                  <p class="skillPara">
+                    <span class="animateText">React</span><span class="animateText">React Router</span><span class="animateText">Redux</span><span class="animateText">Immutable.js</span><span class="animateText">Tailwind CSS</span><span class="animateText">Material UI</span><span class="animateText">AngularJS</span><span class="animateText">Gatsby</span>
+                  </p>
+                </div>
+                <div class="animated-title">
+                  <div class="text-top"><div style="animation-delay: 1.1s">
+                    <span class="animateText" role="heading" aria-level="2">Backend &amp; data</span>
+                  </div></div>
+                  <p class="skillPara">
+                    <span class="animateText">Node.js</span><span class="animateText">Express</span><span class="animateText">PostgreSQL</span><span class="animateText">Prisma</span><span class="animateText">MongoDB</span><span class="animateText">Redis</span><span class="animateText">REST</span><span class="animateText">GraphQL</span><span class="animateText">OAuth2</span>
+                  </p>
+                </div>
+                <div class="animated-title">
+                  <div class="text-top"><div style="animation-delay: 1.5s">
+                    <span class="animateText" role="heading" aria-level="2">Browser platform</span>
+                  </div></div>
+                  <p class="skillPara">
+                    <span class="animateText">WebAssembly</span><span class="animateText">Web Workers</span><span class="animateText">Service Workers</span><span class="animateText">PWA</span><span class="animateText">IndexedDB</span><span class="animateText">WebGL</span><span class="animateText">WebAR</span><span class="animateText">Server-side rendering</span>
+                  </p>
+                </div>
+                <div class="animated-title">
+                  <div class="text-top"><div style="animation-delay: 1.9s">
+                    <span class="animateText" role="heading" aria-level="2">Build &amp; testing</span>
+                  </div></div>
+                  <p class="skillPara">
+                    <span class="animateText">Webpack 5</span><span class="animateText">Vite</span><span class="animateText">Babel</span><span class="animateText">ESLint</span><span class="animateText">Jest</span><span class="animateText">React Testing Library</span><span class="animateText">Playwright</span>
+                  </p>
+                </div>
+                <div class="animated-title">
+                  <div class="text-top"><div style="animation-delay: 2.3s">
+                    <span class="animateText" role="heading" aria-level="2">Infrastructure</span>
+                  </div></div>
+                  <p class="skillPara">
+                    <span class="animateText">Docker</span><span class="animateText">Kubernetes</span><span class="animateText">AWS</span><span class="animateText">Cloudflare</span><span class="animateText">Drone CI</span><span class="animateText">GitHub Actions</span><span class="animateText">Nginx</span><span class="animateText">Caddy</span>
+                  </p>
+                </div>
+                <div class="animated-title">
+                  <div class="text-top"><div style="animation-delay: 2.7s">
+                    <span class="animateText" role="heading" aria-level="2">Engineering practices</span>
+                  </div></div>
+                  <p class="skillPara">
+                    <span class="animateText">Web performance</span><span class="animateText">Internationalization</span><span class="animateText">Accessibility</span><span class="animateText">SEO</span><span class="animateText">Code review</span><span class="animateText">Mentoring</span>
+                  </p>
+                </div>
+              </section>
+              <section id="work" data-view="work" hidden aria-labelledby="work-title" style="pointer-events: all">
+                <h1 class="section-heading" id="work-title" tabindex="-1">Work</h1>
+                <article class="resume-project work-role" data-work="1" aria-labelledby="work-role-0">
+                  <header><h2 id="work-role-0">Blippar</h2></header>
+                  <p class="work-position">Staff Software Engineer</p>
+                  <p class="project-meta">October 2022 – June 2026<br>BlippBuilder India Private Limited · Bengaluru</p>
+                  <p class="project-summary">Browser-based <span class="technical-keyword">WebAR</span> authoring platform for marker, surface (<span class="technical-keyword">SLAM</span>), face and gyro tracking.</p>
+                  <ul>
+                    <li>Built <span class="technical-keyword">client-side video transcoding</span> with <span class="technical-keyword">FFmpeg.wasm</span>, compressing uploads before they leave the device and measuring size, bitrate and duration in production.</li>
+                    <li>Implemented a <span class="technical-keyword">Web Worker pool</span> with <span class="technical-keyword">WASM threading</span>, instance leasing and a <span class="technical-keyword">promise-backed queue</span> for <span class="technical-keyword">parallel transcoding</span>, without delaying first paint.</li>
+                    <li>Replaced video-element probing with lazy-loaded <span class="technical-keyword">mediainfo.js</span> for accurate media metadata, with initialization timeouts.</li>
+                    <li>Rebuilt the <span class="technical-keyword">AR marker manager</span> with trackability scoring, <span class="technical-keyword">HEIC/HEIF</span> conversion, two-stage compression and batch uploads that survive individual file errors.</li>
+                    <li>Rewrote the <span class="technical-keyword">Redux</span> upload queue as a <span class="technical-keyword">task state machine</span> to remove upload/transcoding races; shipped an asset browser that preserves legacy scaling when replacing <span class="technical-keyword">3D models</span> and textures.</li>
+                    <li>Led <span class="technical-keyword">Webpack 5</span> migration work and <span class="technical-keyword">code splitting</span> for a 100+ MB bundle. Consolidated hub <span class="technical-keyword">SSO</span> through <span class="technical-keyword">Node.js/Express</span> proxies and extended <span class="technical-keyword">localization</span> to six languages, including <span class="technical-keyword">Arabic RTL</span>.</li>
+                    <li>Contributed <span class="technical-keyword">150+ commits</span> across eight release trains to a <span class="technical-keyword">200,000-line</span> <span class="technical-keyword">React/Redux</span> codebase with 1,200 files and 60 editor plugins.</li>
+                  </ul>
+                </article>
+                <article class="resume-project work-role" data-work="2" hidden aria-labelledby="work-role-1">
+                  <header><h2 id="work-role-1">Condé Nast</h2></header>
+                  <p class="work-position">Software Engineer</p>
+                  <p class="project-meta">January 2021 – October 2022<br>Bengaluru</p>
+                  <p class="project-summary">Global media company behind Vogue, Wired and Vanity Fair.</p>
+                  <ul>
+                    <li>Migrated the legacy Vogue and Wired sites to a new <span class="technical-keyword">React</span> design system.</li>
+                    <li>Unified <span class="technical-keyword">40+ publishing websites</span> in one <span class="technical-keyword">React</span> and <span class="technical-keyword">Node.js</span> repository, improving code reuse and performance.</li>
+                    <li>Built an internal <span class="technical-keyword">React</span> tool for managers to configure hundreds of components without engineering help for minor changes.</li>
+                    <li>Created <span class="technical-keyword">Chrome extensions</span> in <span class="technical-keyword">HTML</span>, <span class="technical-keyword">CSS</span> and <span class="technical-keyword">React</span> to support <span class="technical-keyword">GitHub</span> pull request testing and extract useful production-site data.</li>
+                  </ul>
+                </article>
+                <article class="resume-project work-role" data-work="3" hidden aria-labelledby="work-role-2">
+                  <header><h2 id="work-role-2">Kuliza Technologies</h2></header>
+                  <p class="work-position">Frontend Developer</p>
+                  <p class="project-meta">January 2018 – March 2020<br>Bengaluru</p>
+                  <p class="project-summary">Digital lending and fintech applications for enterprise clients.</p>
+                  <ul>
+                    <li>Built and maintained abfldirect.com and its personal- and business-loan origination journeys in <span class="technical-keyword">AngularJS (1.x)</span>.</li>
+                    <li>Delivered responsive, cross-browser layouts and integrated <span class="technical-keyword">Razorpay</span> for <span class="technical-keyword">EMI auto-debit</span>.</li>
+                    <li>Led three frontend developers, assigning work and conducting <span class="technical-keyword">code reviews</span>.</li>
+                    <li>Merged two loan codebases into one, <span class="technical-keyword">halving code size</span> and raising <span class="technical-keyword">Lighthouse</span> performance scores by <span class="technical-keyword">more than 30%</span>.</li>
+                  </ul>
+                </article>
+                <div class="carouselish">
+                  <button class="disabled" type="button" data-action="previous-work" aria-label="Previous role" aria-disabled="true">prev</button>
+                  <span class="work-counter" role="status" aria-live="polite">1 / 3</span>
+                  <button type="button" data-action="next-work" aria-label="Next role" aria-disabled="false">next</button>
+                </div>
+              </section>
+              <section class="projects" style="pointer-events: all" id="projects" data-view="projects" hidden=""
+                aria-labelledby="projects-title">
+                <div class="projectsWrapper">
+                  <h1 class="section-heading" id="projects-title" tabindex="-1">Projects</h1>
+                  <div class="project-slide" data-project="1">
+                    <article class="resume-project showProjectPara" aria-labelledby="project-1-title">
+                      <header><h2 id="project-1-title">UIReady</h2>
+                        <a href="https://uiready.dev" target="_blank" rel="noopener noreferrer">uiready.dev ↗</a>
+                      </header>
+                      <p class="project-meta">Solo Founder and Engineer · 2026–Present</p>
+                      <p class="project-summary">Frontend-interview practice platform with an in-browser IDE, live <span class="technical-keyword">Jest</span> tests and diagram-backed solutions.</p>
+                      <ul>
+                        <li>Built with <span class="technical-keyword">React 19</span>, <span class="technical-keyword">React Router 7 SSR</span>, <span class="technical-keyword">TypeScript</span>, <span class="technical-keyword">Vite</span>, <span class="technical-keyword">Tailwind CSS v4</span>, <span class="technical-keyword">Express</span>, <span class="technical-keyword">Prisma</span> and <span class="technical-keyword">PostgreSQL 17</span>, with 663 practice questions.</li>
+                        <li>Created a resizable <span class="technical-keyword">Sandpack</span> IDE with live <span class="technical-keyword">Jest</span> runs and <span class="technical-keyword">Cloudflare R2</span> autosave; generated 428 framework variants from shared question definitions.</li>
+                        <li>Built a <span class="technical-keyword">Vite/MDX/Shiki</span> publishing pipeline and accessibility validation across 2,835 SVG diagrams.</li>
+                        <li>Shipped 763 sitemap URLs, 83 facet landing pages, structured data and dynamic <span class="technical-keyword">Open Graph</span> images.</li>
+                        <li>Integrated <span class="technical-keyword">Dodo Payments</span> and PPP pricing in 74 countries. Operate <span class="technical-keyword">Docker</span> on <span class="technical-keyword">Oracle ARM</span> with <span class="technical-keyword">Caddy</span>, <span class="technical-keyword">Cloudflare</span>, monitoring and hourly <span class="technical-keyword">R2</span> backups.</li>
+                      </ul>
+                    </article>
+                  </div>
+                  <div class="project-slide" data-project="2" hidden>
+                    <article class="resume-project showProjectPara" aria-labelledby="project-2-title">
+                      <header><h2 id="project-2-title">Odigra</h2>
+                        <a href="https://odigra.com" target="_blank" rel="noopener noreferrer">odigra.com ↗</a>
+                      </header>
+                      <p class="project-meta">Solo Founder and Engineer · 2026–Present</p>
+                      <p class="project-summary">Résumé-led job-search extension that crawls listings, filters mismatches locally and ranks opportunities with explanations.</p>
+                      <ul>
+                        <li>Built a <span class="technical-keyword">Manifest V3</span> Chrome extension with a shared Firefox build, PDF/DOCX résumé profiles and adapters for 14 job-board and ATS source families.</li>
+                        <li>Created a resumable <span class="technical-keyword">service-worker crawler</span> with persisted checkpoints, paced retries and account/workspace isolation in <span class="technical-keyword">IndexedDB</span>.</li>
+                        <li>Applied relevance, location and work-authorization filters before paid AI evaluation. Built a <span class="technical-keyword">PostgreSQL 17</span> service with <span class="technical-keyword">encrypted profiles</span>, <span class="technical-keyword">row-level security</span> and durable worker leases.</li>
+                        <li>Added scoped <span class="technical-keyword">OAuth2</span> credentials, safe exports and <span class="technical-keyword">DOMPurify</span> sanitization. Verified permissions, recovery and Chrome/Firefox parity with 189 passing <span class="technical-keyword">Node.js</span> tests.</li>
+                        <li>Deploy with <span class="technical-keyword">Docker</span>, <span class="technical-keyword">Cloudflare</span> and encrypted <span class="technical-keyword">R2</span> backups.</li>
+                      </ul>
+                    </article>
+                  </div>
+                  <div class="project-slide" data-project="3" hidden>
+                    <article class="resume-project showProjectPara" aria-labelledby="project-3-title">
+                      <header><h2 id="project-3-title">Personal Portfolio</h2>
+                        <a href="https://rai.codes" target="_blank" rel="noopener noreferrer">rai.codes ↗</a>
+                      </header>
+                      <p class="project-meta">2019–Present</p>
+                      <p class="project-summary">Originally created in <span class="technical-keyword">Gatsby.js</span> in 2019 without AI; now migrated to <span class="technical-keyword">HTML</span>, <span class="technical-keyword">CSS</span> and <span class="technical-keyword">JavaScript</span>.</p>
+                      <ul>
+                        <li>Removed <span class="technical-keyword">React/Gatsby</span> and styling runtimes, delivering a static site with zero package dependencies and no build step.</li>
+                        <li>Preserved the responsive design, <span class="technical-keyword">WebGL</span> animation and <span class="technical-keyword">offline caching</span>.</li>
+                        <li>Improved keyboard focus, reduced-motion support and animation lifecycle handling, verified through local UI comparisons and automated checks.</li>
+                      </ul>
+                    </article>
+                  </div>
+                  <div class="carouselish">
+                    <button class="disabled" type="button" data-action="previous-project" aria-label="Previous project" aria-disabled="true">prev</button>
+                    <span class="project-position" role="status" aria-live="polite">1 / 3</span>
+                    <button type="button" data-action="next-project" aria-label="Next project" aria-disabled="false">next</button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+  <noscript>
+    <p class="noscript-message">
+      Enable JavaScript to use the menu and animations. Contact:
+      <a href="mailto:amritanshurai04@gmail.com">amritanshurai04@gmail.com</a>.
+    </p>
+  </noscript>
+
+
+</body>
+
+</html>
