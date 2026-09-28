@@ -2147,3 +2147,10 @@ button {
   text-underline-offset: 3px;
 }
 .origin-note a:hover, .origin-note a:focus-visible { color: #fff; }
+
+/* Keep the mobile scene inside the viewport with browser controls visible. */
+@media (max-width: 787px) {
+  .portfolio-scene, .navigation { height: 100svh; }
+  .fluid-canvas { height: 100%; }
+  .origin-note { bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px)); }
+}

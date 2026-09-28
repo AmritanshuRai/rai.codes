@@ -1,4 +1,4 @@
-const CACHE = "rai-portfolio-v17";
+const CACHE = "rai-portfolio-v18";
 const SHELL = [
   "/",
   "/index.html",

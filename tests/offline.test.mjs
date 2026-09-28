@@ -28,7 +28,7 @@ test("offline shell is complete and unrelated caches are preserved", async () =>
         "rai-portfolio-v6",
         "rai-portfolio-v7",
         "rai-portfolio-v8",
-        "rai-portfolio-v17",
+        "rai-portfolio-v18",
         "workbox-precache-old",
         "unrelated-cache",
       ],

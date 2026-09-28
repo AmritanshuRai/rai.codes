@@ -1458,10 +1458,10 @@ function createFluid() {
     document.documentElement.removeEventListener("mouseleave", mouseleaveListener);
     window.removeEventListener("blur", mouseleaveListener);
 
-    canvas.removeEventListener("touchstart", touchstartListener);
-    canvas.removeEventListener("touchmove", touchmoveListener);
-    canvas.removeEventListener("touchend", touchendListener);
-    canvas.removeEventListener("touchcancel", touchendListener);
+    document.removeEventListener("touchstart", touchstartListener);
+    document.removeEventListener("touchmove", touchmoveListener);
+    document.removeEventListener("touchend", touchendListener);
+    document.removeEventListener("touchcancel", touchendListener);
   }
   function addAllEventListeners() {
     if (listening) return;
@@ -1470,12 +1470,11 @@ function createFluid() {
     document.documentElement.addEventListener("mouseleave", mouseleaveListener);
     window.addEventListener("blur", mouseleaveListener);
 
-    canvas.addEventListener("touchstart", touchstartListener, {
-      passive: false,
-    });
-    canvas.addEventListener("touchmove", touchmoveListener, { passive: false });
-    canvas.addEventListener("touchend", touchendListener);
-    canvas.addEventListener("touchcancel", touchendListener);
+    // Content overlays the canvas, so observe touches without blocking page gestures.
+    document.addEventListener("touchstart", touchstartListener, { passive: true });
+    document.addEventListener("touchmove", touchmoveListener, { passive: true });
+    document.addEventListener("touchend", touchendListener, { passive: true });
+    document.addEventListener("touchcancel", touchendListener, { passive: true });
   }
 
   function mousemoveListener(e) {
@@ -1497,30 +1496,37 @@ function createFluid() {
     updatePointerUpData(pointers[0]);
   }
 
+  function touchPosition(touch) {
+    const bounds = canvas.getBoundingClientRect();
+    return {
+      x: (touch.clientX - bounds.left) * canvas.width / bounds.width,
+      y: (touch.clientY - bounds.top) * canvas.height / bounds.height,
+    };
+  }
+
   function touchstartListener(e) {
-    e.preventDefault();
-    const touches = e.targetTouches;
-
-    while (touches.length >= pointers.length) {
-      pointers.push(new PointerPrototype());
-    }
-
-    for (let i = 0; i < touches.length; i++) {
-      const posX = scaleByPixelRatio(touches[i].pageX);
-      const posY = scaleByPixelRatio(touches[i].pageY);
-      updatePointerDownData(pointers[i + 1], touches[i].identifier, posX, posY);
+    if (e.target.closest?.("a, button, input, textarea, select, [contenteditable]")) return;
+    for (const touch of e.changedTouches) {
+      const { x, y } = touchPosition(touch);
+      if (x < 0 || y < 0 || x >= canvas.width || y >= canvas.height) continue;
+      let pointer = pointers.slice(1).find((pointer) => !pointer.down);
+      if (!pointer) {
+        pointer = new PointerPrototype();
+        pointers.push(pointer);
+      }
+      updatePointerDownData(pointer, touch.identifier, x, y);
+      pointer.moved = true;
     }
   }
 
   function touchmoveListener(e) {
-    e.preventDefault();
-    const touches = e.targetTouches;
-    for (let i = 0; i < touches.length; i++) {
-      const pointer = pointers[i + 1];
-      if (!pointer.down) continue;
-      const posX = scaleByPixelRatio(touches[i].pageX);
-      const posY = scaleByPixelRatio(touches[i].pageY);
-      updatePointerMoveData(pointer, posX, posY);
+    for (const touch of e.changedTouches) {
+      const pointer = pointers.slice(1).find(
+        (pointer) => pointer.down && pointer.id === touch.identifier
+      );
+      if (!pointer) continue;
+      const { x, y } = touchPosition(touch);
+      updatePointerMoveData(pointer, x, y);
     }
   }
 
