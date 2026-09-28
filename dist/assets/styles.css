@@ -1748,7 +1748,7 @@ button {
   white-space: normal;
 }
 #home .code-skill { display: block; text-align: left; }
-#home .code-skill:not(.code-size-guide) {
+#home .typing-ready .code-skill:not(.code-size-guide) {
   position: absolute;
   inset: 0;
 }
@@ -2154,3 +2154,10 @@ button {
   .fluid-canvas { height: 100%; }
   .origin-note { bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px)); }
 }
+
+/* Prevent pre-initialization text and entrance animations flashing on refresh. */
+.app-loading body { background: #000; }
+.app-loading .portfolio-shell, .app-loading .skip-link { visibility: hidden; }
+.app-loading .portfolio-shell *,
+.app-loading .portfolio-shell *::before,
+.app-loading .portfolio-shell *::after { animation: none !important; }

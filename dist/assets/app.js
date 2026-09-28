@@ -182,6 +182,7 @@ const originalCode = code.innerHTML;
 const codeSizeGuide = code.cloneNode(true);
 codeSizeGuide.classList.add("code-size-guide");
 code.after(codeSizeGuide);
+code.parentElement.classList.add("typing-ready");
 function typeSkills() {
   const generation = ++typingGeneration;
   code.innerHTML = originalCode;
@@ -413,6 +414,8 @@ if (document.documentElement.classList.contains("intro-active")) {
 } else {
   showView("home", false);
 }
+// The size guide and initial view are now prepared in the same render task.
+document.documentElement.classList.remove("app-loading");
 async function startBackground() {
   if (motion.matches || simulation || backgroundLoading) return;
   backgroundLoading = true;
